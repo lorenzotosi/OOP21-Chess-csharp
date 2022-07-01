@@ -5,7 +5,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.Tosi.Move
 {
-    public class PieceMovementImpl : IPieceMovement
+    public class PieceMovement : IPieceMovement
     {
         public List<Position> SingleMove(IEnumerable<Position> directions, IPiece piece)
         {
