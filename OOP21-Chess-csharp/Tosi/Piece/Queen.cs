@@ -8,7 +8,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
     {
         private const int QueenValue = 9;
 
-        protected Queen(Position position, Side side) : base(Name.Queen, position: position, side: side)
+        protected internal Queen(Position position, Side side) : base(Name.Queen, position: position, side: side)
         {
         }
 

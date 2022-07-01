@@ -8,7 +8,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
     {
         private const int KnightValue = 3;
         
-        protected Knight(Position position, Side side) : base(Name.Knight, position, side)
+        protected internal Knight(Position position, Side side) : base(Name.Knight, position, side)
         {
         }
 
