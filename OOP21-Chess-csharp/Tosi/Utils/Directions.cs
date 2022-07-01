@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OOP21_Chess_csharp.Utils
+namespace OOP21_Chess_csharp.Tosi.Utils
 {
     public class Directions
     {

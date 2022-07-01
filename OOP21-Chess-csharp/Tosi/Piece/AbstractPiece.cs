@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using OOP21_Chess_csharp.Utils;
+using OOP21_Chess_csharp.Tosi.Utils;
 
-namespace OOP21_Chess_csharp.Piece
+namespace OOP21_Chess_csharp.Tosi.Piece
 {
     public abstract class AbstractPiece : IPiece
     {

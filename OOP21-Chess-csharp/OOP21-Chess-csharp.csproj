@@ -6,4 +6,8 @@
         <RootNamespace>OOP21_Chess_csharp</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Tosi" />
+    </ItemGroup>
+
 </Project>

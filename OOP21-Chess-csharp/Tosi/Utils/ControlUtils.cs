@@ -1,6 +1,6 @@
-using OOP21_Chess_csharp.Piece;
+using OOP21_Chess_csharp.Tosi.Piece;
 
-namespace OOP21_Chess_csharp.Utils
+namespace OOP21_Chess_csharp.Tosi.Utils
 {
     public static class ControlUtils
     {

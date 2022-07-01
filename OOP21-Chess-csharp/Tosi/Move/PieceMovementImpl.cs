@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using OOP21_Chess_csharp.Piece;
-using OOP21_Chess_csharp.Utils;
+using OOP21_Chess_csharp.Tosi.Piece;
+using OOP21_Chess_csharp.Tosi.Utils;
 
-namespace OOP21_Chess_csharp.Move
+namespace OOP21_Chess_csharp.Tosi.Move
 {
     public class PieceMovementImpl : IPieceMovement
     {
