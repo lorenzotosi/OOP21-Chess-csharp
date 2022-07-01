@@ -12,7 +12,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
         {
         }
 
-        public override List<Position> GetAllPossiblePositions => new PieceMovementImpl()
+        public override List<Position> GetAllPossiblePositions => new PieceMovement()
             .MultipleMove(Directions.QueenDir(), this);
 
         public override int Value => QueenValue;

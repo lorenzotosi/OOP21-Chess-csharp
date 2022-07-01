@@ -13,7 +13,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
         }
 
         public override List<Position> GetAllPossiblePositions =>
-            new PieceMovementImpl().SingleMove(Directions.KnightDir(), this);
+            new PieceMovement().SingleMove(Directions.KnightDir(), this);
         
         public override int Value => KnightValue;
     }
