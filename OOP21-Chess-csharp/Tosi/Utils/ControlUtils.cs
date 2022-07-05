@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Piece;
 
 namespace OOP21_Chess_csharp.Tosi.Utils
@@ -12,18 +15,19 @@ namespace OOP21_Chess_csharp.Tosi.Utils
         
         public static bool CheckPositionOnBoard(Position position) 
         {
-            return position.X < 8 && position.X >= 0 && position.Y < 8 && position.Y >= 0;
+            return position.X is < 8 and >= 0 && position.Y is < 8 and >= 0;
         }
 
-        public static bool CheckPieceOnPosition(Position position)
+        public static bool CheckPieceOnPosition(Position position, IChessboard chessboard)
         {
-            return false;
+            return chessboard.PiecesList.Select(x => x.Position).Contains(position);
         }
 
-        public static bool CheckEnemyOnPosition(Position position)
+        public static bool CheckEnemyOnPosition(Position position, IChessboard chessboard, IPiece piece)
         {
-            return false;
+            return chessboard.PiecesList.Select(x => x.Position).Contains(position) &&
+                   !chessboard.GetPieceOnPosition(position).Side.Equals(piece.Side);
         }
-        
+
     }
 }
