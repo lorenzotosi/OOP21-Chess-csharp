@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Data.SqlTypes;
+using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.Tosi.Piece
 {
-    public interface IPiece
+    public interface IPiece 
     {
         Name Name { get; }
 
@@ -17,6 +19,6 @@ namespace OOP21_Chess_csharp.Tosi.Piece
 
         Position Position { get; }
 
-        List<Position> GetAllPossiblePositions { get; }
+        List<Position> GetAllPossiblePositions(IChessboard chessboard);
     }
 }

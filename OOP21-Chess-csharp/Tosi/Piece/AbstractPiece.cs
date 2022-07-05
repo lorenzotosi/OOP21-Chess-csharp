@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.Tosi.Piece
@@ -23,7 +24,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
 
         public bool IsMoved() => _isMoved;
 
-        public abstract List<Position> GetAllPossiblePositions { get; }
+        public abstract List<Position> GetAllPossiblePositions(IChessboard chessboard);
 
         public abstract int Value { get; }
 
