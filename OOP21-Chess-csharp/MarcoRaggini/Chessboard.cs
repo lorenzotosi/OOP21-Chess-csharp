@@ -42,5 +42,22 @@ namespace OOP21_Chess_csharp.MarcoRaggini
         {
             return $"Chessboard = {PiecesList.Select(x => x.ToString())}";
         }
+        
+        public override bool Equals(object obj)
+        {
+            return obj is Chessboard cb &&
+                   XBorder == cb.XBorder &&
+                   YBorder == cb.YBorder &&
+                   PiecesList == cb.PiecesList;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1530612366;
+            hashCode = hashCode * -1521134295 + XBorder.GetHashCode();
+            hashCode = hashCode * -1521134295 + YBorder.GetHashCode();
+            hashCode = hashCode * -1521134295 + PiecesList.GetHashCode();
+            return hashCode;
+        }
     }
 }
