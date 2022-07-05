@@ -14,9 +14,9 @@ namespace OOP21_Chess_csharp.MarcoRaggini
 
         public Chessboard(List<IPiece> piecesList, int xborder, int yborder)
         {
-            this.PiecesList = piecesList;
-            this.XBorder = xborder;
-            this.YBorder = yborder;
+            PiecesList = piecesList;
+            XBorder = xborder;
+            YBorder = yborder;
         }
 
         public void Move(Position actualPos, Position finalPos)
