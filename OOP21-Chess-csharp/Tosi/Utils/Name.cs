@@ -3,6 +3,8 @@
     public enum Name
     {
         Queen,
-        Knight
+        Knight,
+        King,
+        Rook
     }
 }
