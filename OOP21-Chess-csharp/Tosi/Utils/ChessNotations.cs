@@ -2,7 +2,7 @@ namespace OOP21_Chess_csharp.Tosi.Utils
 {
     public class ChessNotations
     {
-        public string GetChessNotation(Name pieceName)
+        public static string GetChessNotation(Name pieceName)
         {
             return pieceName switch
             {
