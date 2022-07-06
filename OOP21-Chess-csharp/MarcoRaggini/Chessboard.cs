@@ -59,5 +59,10 @@ namespace OOP21_Chess_csharp.MarcoRaggini
             hashCode = hashCode * -1521134295 + PiecesList.GetHashCode();
             return hashCode;
         }
+
+        public void MoveWithoutChecks(IPiece piece, Position destPos)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
