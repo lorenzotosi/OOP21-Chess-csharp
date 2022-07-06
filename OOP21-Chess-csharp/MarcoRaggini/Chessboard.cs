@@ -22,11 +22,7 @@ namespace OOP21_Chess_csharp.MarcoRaggini
         public void Move(Position actualPos, Position finalPos)
         {
             var attacker = (GetPieceOnPosition(actualPos));
-            if (CanKill(finalPos))
-            {
-                PiecesList.Remove(GetPieceOnPosition(finalPos));
-            }
-            attacker?.SetPosition(finalPos);
+            MoveWithoutChecks(attacker, finalPos);
         }
         public IPiece GetPieceOnPosition(Position selectedPos)
         {
@@ -62,7 +58,11 @@ namespace OOP21_Chess_csharp.MarcoRaggini
 
         public void MoveWithoutChecks(IPiece piece, Position destPos)
         {
-            throw new NotImplementedException();
+            if (CanKill(destPos))
+            {
+                PiecesList.Remove(GetPieceOnPosition(destPos));
+            }
+            piece?.SetPosition(destPos);
         }
     }
 }

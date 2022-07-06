@@ -9,7 +9,7 @@ namespace OOP21_Chess_csharp.MarcoRaggini
         public List<IPiece> PiecesList { get; }
         public int XBorder { get; }
         public int YBorder { get; }
-        public void Move(Position actualPos, Position finalPos);
-        public IPiece GetPieceOnPosition(Position selectedPos);
+        void Move(Position actualPos, Position finalPos);
+        IPiece GetPieceOnPosition(Position selectedPos);
     }
 }
