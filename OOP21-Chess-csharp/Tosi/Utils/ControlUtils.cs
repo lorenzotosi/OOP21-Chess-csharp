@@ -25,7 +25,7 @@ namespace OOP21_Chess_csharp.Tosi.Utils
 
         public static bool CheckEnemyOnPosition(Position position, IChessboard chessboard, IPiece piece)
         {
-            return CheckPieceOnPosition(position, chessboard) &&
+            return chessboard.PiecesList.Select(x => x.Position).Contains(position) &&
                    !chessboard.GetPieceOnPosition(position).Side.Equals(piece.Side);
         }
 

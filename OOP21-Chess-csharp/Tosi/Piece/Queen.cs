@@ -18,4 +18,5 @@ namespace OOP21_Chess_csharp.Tosi.Piece
 
         public override int Value => QueenValue;
     }
+
 }

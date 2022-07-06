@@ -28,8 +28,6 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         }
         private void MoveIfPresent(IPiece piece, Position destPos, Chessboard chessboardCopy)
         {
-            //TODO
-            //implement with ICheckNull interface
             IPiece pieceToMove = chessboardCopy.PiecesList.FirstOrDefault(x => x.Position.Equals(piece.Position));
             if (pieceToMove != null)
             {
