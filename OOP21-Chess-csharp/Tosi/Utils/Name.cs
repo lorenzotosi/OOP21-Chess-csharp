@@ -5,6 +5,7 @@
         Queen,
         Knight,
         King,
-        Rook
+        Rook,
+        Pawn
     }
 }

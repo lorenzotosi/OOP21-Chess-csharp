@@ -10,6 +10,7 @@ namespace OOP21_Chess_csharp
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Hello World!");
             var factory = new PieceFactory();
             var l = new List<IPiece>

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Piece;
 using OOP21_Chess_csharp.Tosi.Utils;
@@ -14,7 +12,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         private readonly IControlCheck _controls = new ControlCheck();
         private IPiece _piece;
         private Position _destination;
-        private Name _promotion;
+        private Name? _promotion;
         private bool _drawOffer;
         private bool _check;
         private bool _checkmate;
@@ -133,10 +131,9 @@ namespace OOP21_Chess_csharp.AndreaZavatta
 
         private IList<IPiece> GetPiecesSameType(IChessboard chessboard)
         {
-            var pieces = chessboard?.PiecesList?.Where(y => !y.Equals(_piece))?.Where(y => y.Name.Equals(_piece.Name))
-                ?.Where(y => !y.Equals(_piece))
-                ?.ToList();
-            return pieces != null ? pieces : new List<IPiece>();
+            return chessboard.PiecesList.Where(y => !y.Equals(_piece)).Where(y => y.Name.Equals(_piece.Name))
+                .Where(y => !y.Equals(_piece))
+                .ToList();
 
         }
         public override string ToString()
@@ -185,9 +182,8 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         }
         private string GetPieceNotation()
         {
-            return null;
-            //TODO
-            //return _piece.GetName().getChessNotation() != 'P' ? NameNotation() : "";
+ 
+            return ChessNotations.GetChessNotation(_piece.Name) != 'P' ? NameNotation() : "";
         }
 
         private string GetPromotion()
