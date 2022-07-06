@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using OOP21_Chess_csharp.Speranza.User;
 using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.MarcoRaggini
