@@ -183,7 +183,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         private string GetPieceNotation()
         {
  
-            return ChessNotations.GetChessNotation(_piece.Name) != 'P' ? NameNotation() : "";
+            return ChessNotations.GetChessNotation(_piece.Name) != 'P' ? ChessNotations.GetChessNotation(_piece.Name).ToString() : "";
         }
 
         private string GetPromotion()
@@ -208,11 +208,6 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         private string GetCapture()
         {
             return _capture ? "x" : "";
-        }
-        private String NameNotation()
-        {   //TODO
-            //return _piece.getName().getChessNotation();
-            return null;
         }
     }
 }

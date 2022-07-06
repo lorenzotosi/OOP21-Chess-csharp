@@ -87,7 +87,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
             return res.ToString();
         }
 
-        private String GetNotation(IPiece piece)
+        private char? GetNotation(IPiece piece)
         {
             return ChessNotations.GetChessNotation(piece.Name);
         }
@@ -129,10 +129,10 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         }
         private string GetCastlingSupport()
         {
-            return (_whiteCastlingKingSide ? ChessNotations.GetChessNotation(Name.King) : "") + 
+            return (_whiteCastlingKingSide ? ChessNotations.GetChessNotation(Name.King).ToString() : "") + 
                    (_whiteCastlingQueenSide ? ChessNotations.GetChessNotation(Name.Queen) : "") + 
-                   (_blackCastlingKingSide ? ChessNotations.GetChessNotation(Name.Queen).ToLowerInvariant() : "") + 
-                   (_blackCastlingQueenSide ? ChessNotations.GetChessNotation(Name.Queen).ToLowerInvariant() : "");
+                   (_blackCastlingKingSide ? Char.ToLower(ChessNotations.GetChessNotation(Name.Queen)) : "") + 
+                   (_blackCastlingQueenSide ? Char.ToLower(ChessNotations.GetChessNotation(Name.Queen))  : "");
         }
 
         public string Build(Chessboard chessboard)
