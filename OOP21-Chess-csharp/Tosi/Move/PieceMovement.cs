@@ -25,14 +25,14 @@ namespace OOP21_Chess_csharp.Tosi.Move
                 .ToList();
         }
 
-        private bool IsMovementValid(IPiece piece, int lenght, Position position, IChessboard chessboard)
+        private bool IsMovementValid(IPiece piece, int length, Position position, IChessboard chessboard)
         { 
-            var p = ControlUtils.GetNewPosition(piece, position, lenght);
+            var p = ControlUtils.GetNewPosition(piece, position, length);
             if (!ControlUtils.CheckPositionOnBoard(p))
             {
                 return false;
             }
-            var previousPosition = ControlUtils.GetNewPosition(piece, position, lenght - 1);
+            var previousPosition = ControlUtils.GetNewPosition(piece, position, length - 1);
             if (ControlUtils.CheckEnemyOnPosition(previousPosition, chessboard, piece))
             {
                 return false;
