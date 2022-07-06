@@ -9,6 +9,7 @@ namespace OOP21_Chess_csharp.MarcoRaggini
 {
     interface IChessboardFactory
     {
+        IChessboard CreateNormalCB();
         IChessboard CreateTestCB(List<IPiece> piecesList);
     }
 }

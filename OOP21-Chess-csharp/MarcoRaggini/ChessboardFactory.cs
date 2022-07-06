@@ -4,14 +4,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.MarcoRaggini
 {
     class ChessboardFactory : IChessboardFactory
     {
+        public IChessboard CreateNormalCB()
+        {
+            var pieces = CreateKnight(0, Side.Black);
+            pieces.AddRange(CreateKnight(7,Side.White));
+            return new Chessboard(pieces, 7, 7);
+        }
+
         public IChessboard CreateTestCB(List<IPiece> piecesList)
         {
-            throw new NotImplementedException();
+            return new Chessboard(CreateCopyOf(piecesList), 7, 7);
+        }
+
+        private List<IPiece> CreateKnight(int row, Side color)
+        {
+            IPieceFactory pieceCreator = new PieceFactory();
+            var pieces = new List<IPiece>();
+            for (var i = 0; i < 8; i++)
+            {
+                pieces.Add(pieceCreator.CreatePiece(Name.Knight, Position.CreateNumericPosition(i, row), color));
+            }
+            return pieces;
+        }
+
+        private List<IPiece> CreateCopyOf(List<IPiece> originalList)
+        {
+            var copy = new List<IPiece>();
+            var pieceFct = new PieceFactory();
+            originalList.ForEach(p => copy.Add(pieceFct.CreatePiece(p.Name, p.Position, p.Side)));
+            return copy;
         }
     }
 }
