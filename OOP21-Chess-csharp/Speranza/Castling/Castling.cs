@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using OOP21_Chess_csharp.AndreaZavatta;
 using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Piece;
 using OOP21_Chess_csharp.Tosi.Utils;
@@ -9,14 +10,21 @@ namespace OOP21_Chess_csharp.Speranza.Castling
 {
     public class Castling : ICastling
     {
+        private readonly IControlCheck _kingInCheck = new ControlCheck();
         public bool CanCastle(IChessboard chessboard, IPiece king, int xRook)
         {
-            /* return chessboard.GetPieceOnPosition(Position.CreateNumericPosition(xRook, king.Position.Y)
-                .Select(r => IsCastlePossible(chessboard, king, r))
-                .DefaultIfEmpty(false)
-                .First(); */
-            return true;
+            var position = Position.CreateNumericPosition(xRook, king.Position.Y);
+            if (!chessboard.PiecesList
+                    .Select(x => x.Position)
+                    .Contains(position))
+            {
+                return false;
+            }
+
+            var rook = chessboard.GetPieceOnPosition(position);
+            return IsCastlePossible(chessboard, king, rook);
         }
+        
         
         private bool IsPositionUnderAttack(IChessboard chessboard, Position position, Side attackedSide)
         {
@@ -37,7 +45,7 @@ namespace OOP21_Chess_csharp.Speranza.Castling
             {
                 return false;
             }
-            if (KingInCheck.isInCheckWithoutKing(chessboard, king.Side))
+            if (_kingInCheck.IsInCheckWithoutKing(chessboard, king.Side))
             {
                 return false;
             }
