@@ -5,7 +5,7 @@ namespace OOP21_Chess_csharp.Speranza.EndGame
 {
     public interface IEndGame
     {
-        bool IsCheckmate(IChessboard chessboard, Side side);
+        bool IsCheckmate(Chessboard chessboard, Side side);
 
         bool IsStalemate(IChessboard chessboard, Side side);
 
