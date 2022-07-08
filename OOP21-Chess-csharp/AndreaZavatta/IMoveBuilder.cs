@@ -18,11 +18,9 @@ namespace OOP21_Chess_csharp.AndreaZavatta
 
         IMoveBuilder Piece(IPiece piece);
 
-
         IMoveBuilder Destination(Position destination);
 
         IMoveBuilder Capture();
-
 
         IMoveBuilder KingSideCastling();
 
@@ -36,9 +34,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         IMoveBuilder Checkmate();
 
         IMoveBuilder Row();
-
         IMoveBuilder Column();
-
         IMoveBuilder Build(IChessboard chessboard);
     }
 }
