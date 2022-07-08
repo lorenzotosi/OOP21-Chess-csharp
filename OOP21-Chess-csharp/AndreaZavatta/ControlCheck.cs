@@ -36,7 +36,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         }
         private IChessboard CopyChessboard(IChessboard chessboard)
         {
-            return _chessboardFact.CreateTestCB(chessboard.PiecesList);
+            return _chessboardFact.CreateTestCb(chessboard.PiecesList);
         }
         private bool IsInCheckSupport(IChessboard chessboard, Side color, Func<IPiece, bool> func)
         {

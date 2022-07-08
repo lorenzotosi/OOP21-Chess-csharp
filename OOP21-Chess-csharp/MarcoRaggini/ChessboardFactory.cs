@@ -8,16 +8,16 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.MarcoRaggini
 {
-    class ChessboardFactory : IChessboardFactory
+    public class ChessboardFactory : IChessboardFactory
     {
-        public IChessboard CreateNormalCB()
+        public IChessboard CreateNormalCb()
         {
             var pieces = CreateKnight(0, Side.Black);
             pieces.AddRange(CreateKnight(7,Side.White));
             return new Chessboard(pieces, 7, 7);
         }
 
-        public IChessboard CreateTestCB(List<IPiece> piecesList)
+        public IChessboard CreateTestCb(List<IPiece> piecesList)
         {
             return new Chessboard(CreateCopyOf(piecesList), 7, 7);
         }

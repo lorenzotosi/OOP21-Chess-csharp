@@ -48,7 +48,7 @@ namespace OOP21_Chess_csharp.MarcoRaggini
 
         public override int GetHashCode()
         {
-            int hashCode = -1530612366;
+            var hashCode = -1530612366;
             hashCode = hashCode * -1521134295 + XBorder.GetHashCode();
             hashCode = hashCode * -1521134295 + YBorder.GetHashCode();
             hashCode = hashCode * -1521134295 + PiecesList.GetHashCode();
