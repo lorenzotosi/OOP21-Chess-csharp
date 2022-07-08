@@ -31,10 +31,9 @@ namespace OOP21_Chess_TestCsharp
             l.Add(king);
             l.Add(rook);
             l.Add(bishop);
-            var xRook = rook.Position.X;
             var board = new Chessboard(l, 7, 7);
             
-           Assert.True(_castling.CanCastle(board, king, xRook)); 
+           Assert.True(_castling.CanCastle(board, king, rook.Position.X)); 
         }
     }
 }
