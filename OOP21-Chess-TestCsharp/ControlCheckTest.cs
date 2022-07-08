@@ -20,7 +20,7 @@ namespace OOP21_Chess_TestCsharp
         [Test]
         public void IsInCheckTrue()
         {
-            IChessboard chessboard = _chessboardFact.CreateTestCB(new List<IPiece>
+            IChessboard chessboard = _chessboardFact.CreateTestCb(new List<IPiece>
             {
                 _pieceFact.CreatePiece(Name.King, Position.CreateNewPosition("a2"), Side.White),
                 _pieceFact.CreatePiece(Name.Rook, Position.CreateNewPosition("a5"), Side.Black)
@@ -34,7 +34,7 @@ namespace OOP21_Chess_TestCsharp
             IPiece whiteKing = _pieceFact.CreatePiece(Name.King, Position.CreateNewPosition("a2"), Side.White);
             IPiece whiteBishop =_pieceFact.CreatePiece(Name.Bishop, Position.CreateNewPosition("a4"), Side.White);
             IPiece blackRook = _pieceFact.CreatePiece(Name.Rook, Position.CreateNewPosition("a5"), Side.Black);
-            IChessboard chessboard = _chessboardFact.CreateTestCB(new List<IPiece>
+            IChessboard chessboard = _chessboardFact.CreateTestCb(new List<IPiece>
             {
                 whiteKing, whiteBishop, blackRook
             });
@@ -47,7 +47,7 @@ namespace OOP21_Chess_TestCsharp
             IPiece whiteKing = _pieceFact.CreatePiece(Name.King, Position.CreateNewPosition("a2"), Side.White);
             IPiece whiteBishop = _pieceFact.CreatePiece(Name.Bishop, Position.CreateNewPosition("d6"), Side.White);
             IPiece blackRook = _pieceFact.CreatePiece(Name.Rook, Position.CreateNewPosition("a5"), Side.Black);
-            IChessboard chessboard = _chessboardFact.CreateTestCB(new List<IPiece>
+            IChessboard chessboard = _chessboardFact.CreateTestCb(new List<IPiece>
             {
                 whiteKing, whiteBishop, blackRook
             });
@@ -60,7 +60,7 @@ namespace OOP21_Chess_TestCsharp
             IPiece whiteKing = _pieceFact.CreatePiece(Name.King, Position.CreateNewPosition("e1"), Side.White);
             IPiece whiteRook = _pieceFact.CreatePiece(Name.Rook, Position.CreateNewPosition("e3"), Side.White);
             IPiece blackRook = _pieceFact.CreatePiece(Name.Rook, Position.CreateNewPosition("e6"), Side.Black);
-            IChessboard chessboard = _chessboardFact.CreateTestCB(new List<IPiece>
+            IChessboard chessboard = _chessboardFact.CreateTestCb(new List<IPiece>
             {
                 whiteKing, whiteRook, blackRook
             });

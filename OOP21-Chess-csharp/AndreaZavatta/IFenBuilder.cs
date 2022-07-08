@@ -8,7 +8,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
-    interface IFenBuilder
+    public interface IFenBuilder
     {
         public IFenBuilder ActiveColor(Side side);
         public IFenBuilder BlackCastlingKingSide();
@@ -18,5 +18,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         public IFenBuilder EnPassant(string pos);
         public IFenBuilder HalfMoveClock(int halfMove);
         public IFenBuilder FullMoveNumber(int fullMove);
+        public string Build(IChessboard chessboard);
+
     }
 }
