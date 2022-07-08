@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
 using OOP21_Chess_csharp.Speranza.User;
 using OOP21_Chess_csharp.Tosi.Utils;
 
@@ -41,8 +40,8 @@ namespace OOP21_Chess_csharp.MarcoRaggini
         public Side GetOppositeColor(Side color)
         {
             return color.Equals(Side.White) 
-                ? Side.White 
-                : Side.Black;
+                ? Side.Black 
+                : Side.White;
         }
 
         public KeyValuePair<User, User> GetUsers()

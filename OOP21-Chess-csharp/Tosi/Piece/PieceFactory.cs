@@ -12,7 +12,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
                 Name.Queen => new Queen(position, color),
                 Name.Knight => new Knight(position, color),
                 Name.Bishop => new Bishop(position, color),
-                Name.King => new Bishop(position, color),
+                Name.King => new King(position, color),
                 Name.Rook => new Rook(position, color),
                 _ => null
             };
