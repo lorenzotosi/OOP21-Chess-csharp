@@ -14,7 +14,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
         }
 
         public override List<Position> GetAllPossiblePositions(IChessboard chessboard) =>
-            new PieceMovement().SingleMove(Directions.BishopDir(), this, chessboard);
+            new PieceMovement().MultipleMove(Directions.BishopDir(), this, chessboard);
 
         public override int Value => BishopValue;
     }
