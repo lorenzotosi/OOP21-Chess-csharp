@@ -9,7 +9,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
-    interface IControlCheck
+    public interface IControlCheck
     {
         List<Position> ControlledMoves(IChessboard chessboard, IPiece piece);
         bool IsInCheckWithoutKing(IChessboard chessboard, Side color);

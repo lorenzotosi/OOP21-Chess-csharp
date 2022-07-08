@@ -7,7 +7,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
-    class ControlCheck : IControlCheck
+    public class ControlCheck : IControlCheck
     {
         private readonly IChessboardFactory _chessboardFact = new ChessboardFactory();
         public List<Position> ControlledMoves(IChessboard chessboard, IPiece piece)

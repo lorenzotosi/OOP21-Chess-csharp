@@ -4,7 +4,7 @@ using OOP21_Chess_csharp.MarcoRaggini;
 using OOP21_Chess_csharp.Tosi.Piece;
 using OOP21_Chess_csharp.Tosi.Utils;
 
-namespace OOP21_Chess_TestCsharp
+namespace OOP21_Chess_TestCsharp.LorenzoTosiTest
 {
     public class Tests
     {

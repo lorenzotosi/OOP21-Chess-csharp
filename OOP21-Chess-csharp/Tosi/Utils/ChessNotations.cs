@@ -1,6 +1,8 @@
+using System;
+
 namespace OOP21_Chess_csharp.Tosi.Utils
 {
-    public class ChessNotations
+    public static class ChessNotations
     {
         public static char GetChessNotation(Name? pieceName)
         {
@@ -9,7 +11,10 @@ namespace OOP21_Chess_csharp.Tosi.Utils
                 Name.King => 'K',
                 Name.Knight => 'N',
                 Name.Queen => 'Q',
-                Name.Rook => 'R'
+                Name.Rook => 'R',
+                Name.Bishop => 'B',
+                Name.Pawn => 'p',
+                _ => throw new ArgumentOutOfRangeException(nameof(pieceName), pieceName, null)
             };
         }
     }

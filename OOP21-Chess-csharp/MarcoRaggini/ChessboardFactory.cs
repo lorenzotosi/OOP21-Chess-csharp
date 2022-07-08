@@ -13,7 +13,7 @@ namespace OOP21_Chess_csharp.MarcoRaggini
             return new Chessboard(pieces, 7, 7);
         }
 
-        public IChessboard CreateTestCb(List<IPiece> piecesList)
+        public IChessboard CreateTestCb(IList<IPiece> piecesList)
         {
             return new Chessboard(CreateCopyOf(piecesList), 7, 7);
         }
@@ -29,11 +29,12 @@ namespace OOP21_Chess_csharp.MarcoRaggini
             return pieces;
         }
 
-        private List<IPiece> CreateCopyOf(List<IPiece> originalList)
+        private List<IPiece> CreateCopyOf(IList<IPiece> originalList)
         {
             var copy = new List<IPiece>();
             var pieceFct = new PieceFactory();
-            originalList.ForEach(p => copy.Add(pieceFct.CreatePiece(p.Name, p.Position, p.Side)));
+            var list = new List<IPiece>(originalList);
+            list.ForEach(p => copy.Add(pieceFct.CreatePiece(p.Name, p.Position, p.Side)));
             return copy;
         }
     }

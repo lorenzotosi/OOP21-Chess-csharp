@@ -9,7 +9,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
-    class FenBuilder : IFenBuilder
+    public class FenBuilder : IFenBuilder
     {
         private Side _side;
         private bool _blackCastlingQueenSide = true;
@@ -89,7 +89,8 @@ namespace OOP21_Chess_csharp.AndreaZavatta
 
         private char? GetNotation(IPiece piece)
         {
-            return ChessNotations.GetChessNotation(piece.Name);
+            var chessNotation = ChessNotations.GetChessNotation(piece.Name);
+            return piece.Side.Equals(Side.White) ? chessNotation : Char.ToLower(chessNotation);
         }
 
         private string DiffPosX(int previousPiece, IPiece piece)
@@ -131,13 +132,15 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         {
             return (_whiteCastlingKingSide ? ChessNotations.GetChessNotation(Name.King).ToString() : "") + 
                    (_whiteCastlingQueenSide ? ChessNotations.GetChessNotation(Name.Queen) : "") + 
-                   (_blackCastlingKingSide ? Char.ToLower(ChessNotations.GetChessNotation(Name.Queen)) : "") + 
+                   (_blackCastlingKingSide ? Char.ToLower(ChessNotations.GetChessNotation(Name.King)) : "") + 
                    (_blackCastlingQueenSide ? Char.ToLower(ChessNotations.GetChessNotation(Name.Queen))  : "");
         }
 
-        public string Build(Chessboard chessboard)
+        public string Build(IChessboard chessboard)
         {
-            return $"{FenPiece(chessboard)} {GetActiveColor()} {GetCastling()} {_enPassant} {_halfMoveClock} {_fullMoveNumber}";
+            var temp =
+                $"{FenPiece(chessboard)} {GetActiveColor()} {GetCastling()} {_enPassant} {_halfMoveClock} {_fullMoveNumber}";
+            return temp;
         }
     }
 }
