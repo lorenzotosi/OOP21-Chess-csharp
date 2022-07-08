@@ -7,7 +7,7 @@ using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
-    class MoveBuilder : IMoveBuilder
+    public class MoveBuilder : IMoveBuilder
     {
         private readonly IControlCheck _controls = new ControlCheck();
         private IPiece _piece;
@@ -134,7 +134,6 @@ namespace OOP21_Chess_csharp.AndreaZavatta
             return chessboard.PiecesList.Where(y => !y.Equals(_piece)).Where(y => y.Name.Equals(_piece.Name))
                 .Where(y => !y.Equals(_piece))
                 .ToList();
-
         }
         public override string ToString()
         {

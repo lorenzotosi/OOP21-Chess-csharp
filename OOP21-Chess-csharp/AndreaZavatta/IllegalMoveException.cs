@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace OOP21_Chess_csharp.AndreaZavatta
 {
     [Serializable]
-    internal class IllegalMoveException : Exception
+    public class IllegalMoveException : Exception
     {
         public IllegalMoveException()
         {
