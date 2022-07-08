@@ -173,7 +173,7 @@ namespace OOP21_Chess_csharp.AndreaZavatta
         }
         private string GetDepartureX()
         {
-            return _column || IsPawnCapture() ? _piece.Position.X.ToString() : "";
+            return _column || IsPawnCapture() ? _piece.Position.GetCharX().ToString() : "";
         }
         private bool IsPawnCapture()
         {
