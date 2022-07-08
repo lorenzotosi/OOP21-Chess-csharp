@@ -50,7 +50,7 @@ namespace OOP21_Chess_TestCsharp
             l.Add(queen);
             var board = new Chessboard(l, 7, 7);
 
-            Assert.False(_endGame.IsStalemate(board, king.Side));
+            Assert.True(_endGame.IsStalemate(board, king.Side));
         }
     }
 }
