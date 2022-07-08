@@ -71,7 +71,7 @@ namespace OOP21_Chess_csharp.Speranza.EndGame
         }
         
         private bool CanShield(IChessboard chessboard, IControlCheck controls, IPiece shield) {
-            return controls.ControlledMoves(chessboard, shield).Contains();
+            return !controls.ControlledMoves(chessboard, shield).Any();
         }
         private bool ControlCheck(IChessboard chessboard, Side side, IControlCheck controls) {
             return controls.IsInCheckWithoutKing(chessboard, side);
