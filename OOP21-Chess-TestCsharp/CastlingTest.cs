@@ -33,7 +33,7 @@ namespace OOP21_Chess_TestCsharp
             l.Add(bishop);
             var board = new Chessboard(l, 7, 7);
             
-           Assert.True(_castling.CanCastle(board, king, rook.Position.X)); 
+           Assert.False(_castling.CanCastle(board, king, rook.Position.X)); 
         }
     }
 }
