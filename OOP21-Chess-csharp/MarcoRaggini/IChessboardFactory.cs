@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace OOP21_Chess_csharp.MarcoRaggini
 {
-    interface IChessboardFactory
+    public interface IChessboardFactory
     {
-        IChessboard CreateNormalCB();
-        IChessboard CreateTestCB(List<IPiece> piecesList);
+        IChessboard CreateNormalCb();
+        IChessboard CreateTestCb(List<IPiece> piecesList);
     }
 }
