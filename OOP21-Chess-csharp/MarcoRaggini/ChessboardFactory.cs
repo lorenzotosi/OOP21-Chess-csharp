@@ -1,9 +1,5 @@
 ﻿using OOP21_Chess_csharp.Tosi.Piece;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OOP21_Chess_csharp.Tosi.Utils;
 
 namespace OOP21_Chess_csharp.MarcoRaggini

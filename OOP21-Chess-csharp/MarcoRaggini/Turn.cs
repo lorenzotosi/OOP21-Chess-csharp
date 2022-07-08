@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
 using OOP21_Chess_csharp.Speranza.User;
 using OOP21_Chess_csharp.Tosi.Utils;
 
