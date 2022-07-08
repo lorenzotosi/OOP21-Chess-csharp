@@ -33,7 +33,7 @@ namespace OOP21_Chess_TestCsharp
             l.Add(queen);
             var board = new Chessboard(l, 7, 7);
 
-            Assert.False(_endGame.IsCheckmate(board, king.Side));
+            Assert.True(_endGame.IsCheckmate(board, king.Side));
         }
         
         [Test]
