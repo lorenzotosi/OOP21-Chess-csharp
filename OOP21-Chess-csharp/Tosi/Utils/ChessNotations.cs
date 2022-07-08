@@ -9,7 +9,9 @@ namespace OOP21_Chess_csharp.Tosi.Utils
                 Name.King => 'K',
                 Name.Knight => 'N',
                 Name.Queen => 'Q',
-                Name.Rook => 'R'
+                Name.Rook => 'R',
+                Name.Bishop => 'B',
+                Name.Pawn => 'p'
             };
         }
     }
