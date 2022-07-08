@@ -9,7 +9,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
     {
         private const int BishopValue = 3;
         
-        public Bishop(Name name, Position position, Side side) : base(Name.Bishop, position, side)
+        protected internal Bishop(Position position, Side side) : base(Name.Bishop, position, side)
         {
         }
 

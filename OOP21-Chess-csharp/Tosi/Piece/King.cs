@@ -11,7 +11,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
         private const int KingValue = 0;
         private readonly ICastling _castle = new Castling();
         
-        protected internal King(Name name, Position position, Side side) : base(Name.King, position, side)
+        protected internal King(Position position, Side side) : base(Name.King, position, side)
         {
         }
 

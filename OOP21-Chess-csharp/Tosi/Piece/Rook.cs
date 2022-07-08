@@ -9,7 +9,7 @@ namespace OOP21_Chess_csharp.Tosi.Piece
     {
         private const int RookValue = 5;
         
-        public Rook(Name name, Position position, Side side) : base(Name.Rook, position, side)
+        protected internal Rook(Position position, Side side) : base(Name.Rook, position, side)
         {
         }
 
