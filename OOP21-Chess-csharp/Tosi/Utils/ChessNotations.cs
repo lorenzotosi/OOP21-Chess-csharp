@@ -1,3 +1,5 @@
+using System;
+
 namespace OOP21_Chess_csharp.Tosi.Utils
 {
     public class ChessNotations
@@ -11,7 +13,8 @@ namespace OOP21_Chess_csharp.Tosi.Utils
                 Name.Queen => 'Q',
                 Name.Rook => 'R',
                 Name.Bishop => 'B',
-                Name.Pawn => 'p'
+                Name.Pawn => 'p',
+                _ => throw new ArgumentOutOfRangeException(nameof(pieceName), pieceName, null)
             };
         }
     }
