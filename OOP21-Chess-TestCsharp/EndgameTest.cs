@@ -35,5 +35,22 @@ namespace OOP21_Chess_TestCsharp
 
             Assert.False(_endGame.IsCheckmate(board, king.Side));
         }
+        
+        [Test]
+        public void Test2()
+        {
+            var l = new List<IPiece>
+            {
+
+            };
+            var king = _factory.CreatePiece(Name.King, Position.CreateNewPosition("a8"), Side.Black);
+            var queen = _factory.CreatePiece(Name.Queen, Position.CreateNewPosition("c7"), Side.White);
+
+            l.Add(king);
+            l.Add(queen);
+            var board = new Chessboard(l, 7, 7);
+
+            Assert.False(_endGame.IsStalemate(board, king.Side));
+        }
     }
 }
