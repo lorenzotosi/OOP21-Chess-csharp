@@ -2,7 +2,7 @@ using System;
 
 namespace OOP21_Chess_csharp.Tosi.Utils
 {
-    public class ChessNotations
+    public static class ChessNotations
     {
         public static char GetChessNotation(Name? pieceName)
         {
