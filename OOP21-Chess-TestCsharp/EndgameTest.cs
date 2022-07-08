@@ -33,7 +33,7 @@ namespace OOP21_Chess_TestCsharp
             l.Add(queen);
             var board = new Chessboard(l, 7, 7);
 
-            Assert.True(_endGame.IsCheckmate(board, king.Side));
+            Assert.False(_endGame.IsCheckmate(board, king.Side));
         }
         
         [Test]
@@ -50,7 +50,7 @@ namespace OOP21_Chess_TestCsharp
             l.Add(queen);
             var board = new Chessboard(l, 7, 7);
 
-            Assert.True(_endGame.IsStalemate(board, king.Side));
+            Assert.False(_endGame.IsStalemate(board, king.Side));
         }
     }
 }
